@@ -1,4 +1,4 @@
-# Optics-Correction-for-VEPP-4M
+# Optics-Correction-for-VEPP-4M [TEST]
 A program for the magnetic structure correction (linear optics) of the VEPP-4M collider.
 
 The program is intended for beam-based correction (errors finding) and optimization (fitting to a design model). Actually, orbit correction is possible as well.
