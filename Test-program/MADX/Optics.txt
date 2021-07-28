@@ -1,0 +1,27 @@
+call,file="VEPP4M.txt";
+option,-echo;
+Beam, particle = electron, energy = 1.8;
+use,sequence=RING;
+
+
+
+
+//select, flag=error, class=vkicker,pattern=SEZ2;
+//efcomp, dkn={0.000000002,0.00,0,0};
+!stop;
+
+
+
+
+!create,table=matrix,column=name1;
+
+//SEZ2, kick=0.0003;
+//use,sequence=VEPP4M;
+
+select,flag=matrix,class=monitor,column=name,s,betx,bety,dx,dy;
+twiss,centre,table=matrix,file="beta.txt";
+
+
+
+!plot,table=matrix,file="madx.ps",haxis=s,vaxis=betx,range=#S/#E;
+
